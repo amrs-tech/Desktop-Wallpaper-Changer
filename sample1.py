@@ -6,11 +6,9 @@ from datetime import datetime as dt
 import sys
 
 i='1'
-#arguments example= /home/user/Desktop/ day
-arguments=sys.argv[1:]
-path=arguments[0]
-name=arguments[1]
-path=path+name
+#arguments example= /home/user/Desktop/ 
+path=sys.argv[1:][0]
+
 try:
     day = dt.now().date()
     day = str(day)
@@ -24,6 +22,8 @@ try:
 
     except:
         print('Server Error !')
+
+    path=path+day+'.jpg'
     # path = 'C:\\Users\\Sabi\\Downloads\\m\\pic_dtop\\'+day+'.jpg'
     file = u.urlretrieve(url,path)
     ctypes.windll.user32.SystemParametersInfoW(20, 0, path , 0)
