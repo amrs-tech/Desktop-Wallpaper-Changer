@@ -4,6 +4,10 @@ import urllib.request as u
 import requests, random
 from datetime import datetime as dt
 
+download_directory = os.path.abspath(os.path.join('.', 'pic_dtop'))
+if not os.path.exists(download_directory):
+    os.mkdir(download_directory)
+
 i='1'
 
 try:
@@ -19,7 +23,7 @@ try:
 
     except:
         print('Server Error !')
-    path = 'C:\\Users\\Sabi\\Downloads\\m\\pic_dtop\\'+day+'.jpg'
+    path = os.path.join(download_directory, '{day}.jpg'.format(day=day))
     file = u.urlretrieve(url,path)
     ctypes.windll.user32.SystemParametersInfoW(20, 0, path , 0)
 except Exception as e:
