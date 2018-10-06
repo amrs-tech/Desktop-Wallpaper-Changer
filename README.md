@@ -1,5 +1,21 @@
 # Desktop-Wallpaper-Changer
-This python program automatically changes the desktop wallpaper daily.
-Add this batch file to the Startups folder.
-And the system will run it daily whenever the system starts, and the picture will be downloaded when there's internet connection.
-Then it will be kept as the desktop wallpaper.
+
+## Purpose
+
+Desktop Wallpaper Changer automatically downloads changes the desktop wallpaper daily.
+
+## Getting Started
+
+### Add file to Startup Folder in Windows
+
+* Press Windows+R to open the "Run" dialog box.
+* Type "shell:startup" and then hit Enter to open the "Startup" folder.
+* Add the file name to "Startup" folder.
+
+### Working
+
+The file will run on system boot and the image will be downloaded when the internet is connected.
+
+## Report an Issue:
+
+If you come across a problem, create a new issue [here](https://github.com/amrs-tech/Desktop-Wallpaper-Changer/issues)
