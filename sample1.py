@@ -3,9 +3,14 @@ import ctypes
 import urllib.request as u
 import requests, random
 from datetime import datetime as dt
+import sys
 
 i='1'
-
+#arguments example= /home/user/Desktop/ day
+arguments=sys.argv[1:]
+path=arguments[0]
+name=arguments[1]
+path=path+name
 try:
     day = dt.now().date()
     day = str(day)
@@ -19,7 +24,7 @@ try:
 
     except:
         print('Server Error !')
-    path = 'C:\\Users\\Sabi\\Downloads\\m\\pic_dtop\\'+day+'.jpg'
+    # path = 'C:\\Users\\Sabi\\Downloads\\m\\pic_dtop\\'+day+'.jpg'
     file = u.urlretrieve(url,path)
     ctypes.windll.user32.SystemParametersInfoW(20, 0, path , 0)
 except Exception as e:
