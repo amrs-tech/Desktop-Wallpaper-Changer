@@ -19,10 +19,12 @@ try:
 
     except:
         print('Server Error !')
-    path = 'C:\\Users\\Sabi\\Downloads\\m\\pic_dtop\\'+day+'.jpg'
-    file = u.urlretrieve(url,path)
-    ctypes.windll.user32.SystemParametersInfoW(20, 0, path , 0)
+    def get_download_path:
+        home = os.path.expanduser("~")
+        downloads_folder = os.path.join(home, "Downloads")
+        path = os.path.join(downloads_folder, 'day.jpg'.format(day=day)) 
+        file = u.urlretrieve(url, path)
+        ctypes.windll.user32.SystemParametersInfoW(20, 0, path , 0)
 except Exception as e:
-    print('Some Technical issues !')
 
    
