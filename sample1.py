@@ -4,7 +4,7 @@ import urllib.request as u
 import requests, random
 from datetime import datetime as dt
 
-download_directory = os.path.join('.', 'pic_dtop')
+download_directory = os.path.abspath(os.path.join('.', 'pic_dtop'))
 if not os.path.exists(download_directory):
     os.mkdir(download_directory)
 
